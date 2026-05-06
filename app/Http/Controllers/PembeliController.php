@@ -6,5 +6,9 @@ use App\Models\Pembeli;
 
 class PembeliController extends Controller
 {
-    p
+    public function index () {
+        $pembelis = Pembeli::with('barang')->get();
+
+        return view('pembeli.index', compact('pembelis'));
+    }
 }
