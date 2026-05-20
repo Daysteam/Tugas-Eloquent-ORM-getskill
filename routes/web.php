@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/group', [GroupController::class,'index'])->name('group.index');
+Route::get('/', [GroupController::class,'index'])->name('group.index');
 Route::get('/pembeli', [PembeliController::class,'index'])->name('barang.index');
 Route::get('/mahasiswa', [MahasiswaController::class,'index'])->name('mahasiswa.index');
 

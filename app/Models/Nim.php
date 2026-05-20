@@ -10,10 +10,11 @@ class Nim extends Model
     use HasFactory;
 
     protected $fillable = [
-        'no_nim'
+        'no_nim',
+        'mahasiswa_id'
     ];
 
     public function mahasiswa() {
-        return $this->hasOne(Mahasiswa::class);
+        return $this->belongsTo(Mahasiswa::class);
     }
 }
